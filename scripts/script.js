@@ -8,8 +8,11 @@ for(const seat of seats){
     seat.addEventListener('click', function(event){
  count++;
  if(count > 4){
+    alert('you cannot select more than four seat')
     return;
+    
  }
+
  seatLeft--;
        const title = seat.innerText;
        const price = 550;
@@ -55,8 +58,29 @@ event.target.style.backgroundColor = "#1DD100";
     event.target.style.color = "white";
     event.target.disabled = true;
 
+    // modal
+    const seatCount = document.getElementById("seat-count").innerText;
+
+    if (seatCount > 0) {
+      const numberInput = document.getElementById("number-input");
+      const modalBtn = document.getElementById("modalBtn");
+      numberInput.addEventListener("input", function () {
+        if (this.value.length > 0) {
+          modalBtn.removeAttribute("disabled");
+       
+        } else {
+          modalBtn.setAttribute("disabled", true);
+        }
+      });
+    }
+    
     })
 }
+
+
+
+
+
 
 // cupon section
 const btn = document.getElementById('apply-btn')
@@ -96,6 +120,7 @@ cuponContainer.classList.add('hidden');
 
 
 })
+
 
 
 

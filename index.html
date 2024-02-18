@@ -27,13 +27,16 @@
 
   <!-- google font -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap');
 
 .font-raleway{
     font-family: "Raleway", sans-serif;
 }
 .font-inter{
     font-family: "Inter", sans-serif;
+}
+.font-roboto{
+    font-family: "Roboto", sans-serif;
 }
 
 </style>
@@ -470,21 +473,43 @@
         </div>
         
         <div class="py-6">
-            <h3 class="text-[#030712] text-base font-semibold pb-4">Passenger Name*</h3>
+            <h3 id="name-input" class="text-[#030712] text-base font-semibold pb-4">Passenger Name*</h3>
             <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs text-base text-[#03071266]" />
         </div>
         
         <div class="">
             <h3 class="text-[#030712] text-base font-semibold pb-4">Phone Number*</h3>
-            <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs text-base text-[#03071266]" />
+            <input id="number-input" type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs text-base text-[#03071266]" />
         </div>
         <div class="py-6">
             <h3 class="text-[#030712] text-base font-semibold pb-4">Email ID</h3>
             <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs text-base text-[#03071266]" />
         </div>
-        
-        <button class="btn font-raleway text-xl text-white font-extrabold bg-[#1DD100] w-full rounded-2xl">Next</button>
-        
+
+
+<!-- modal -->
+
+<label disabled id="modalBtn" for="my_modal_7" class="btn w-full font-raleway font-extrabold text-xl text-white bg-[#1DD100] ">Next</label>
+
+<input type="checkbox" id="my_modal_7" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <div class="flex flex-col justify-center items-center font-roboto">
+      <img src="./images/success.png" alt="" />
+      <h2 class="text-2xl font-bold text-[#27AE60] py-2 lg:py-9">SUCCESS</h2>
+      <p class="lg:py-4 text-[#4A4A4A] text-xl font-medium text-center px-4 lg:px-10">Thank you for Booking Our Bus Seats. <br>
+        We are working hard to find the best service and deals for you.</p>
+      <p class="text-lg text-[#4A4A4A] font-light pb-4">
+        Shortly you will find a confirmation in your email.
+      </p>
+      <a class="btn w-[60%] font-raleway font-extrabold text-xl text-white bg-[#27AE60] " href=""><button >Continue</button>
+      </div></a>
+  </div>
+  <label class="modal-backdrop" for="my_modal_7">Close</label>
+</div>
+
+
+
         <div class="flex justify-between gap-9 pt-6 pb-12 lg:pb-28">
         <a class="underline" href="">Terms and Conditions</a>
         <a class="underline" href="">Cancellation Policy</a>
