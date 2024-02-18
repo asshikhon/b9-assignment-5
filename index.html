@@ -83,13 +83,13 @@
         <h1 class="mb-5 text-4xl lg:text-5xl text-white font-extrabold font-inter">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
 
         <p class="mb-5">"End-to-end travel with Paribahan: seamless, efficient, comfortable <br> transportation service connecting destinations effortlessly."</p>
-        <button class="btn btn-primary bg-[#1DD100] text-black font-bold text-base lg:text-xl border-0">Buy Tickets</button>
+        <a href="#sit-section"><button class="btn btn-primary bg-[#1DD100] text-black font-bold text-base lg:text-xl border-0">Buy Tickets</button></a>
       </div>
     </div>
   </div>
 <!-- 3 card section -->
 
-<div class="flex flex-col lg:flex-row gap-6 mx-auto mt-4 lg:mt-12 lg:mt-0 lg:absolute lg:bottom-[22%] lg:right-[25%]">
+<div class="flex flex-col justify-between lg:flex-row gap-24 mt-4 lg:mt-12 lg:absolute lg:bottom-[30%] lg:right-[25%]">
 
     <!-- 1st card  -->
     <div class="flex justify-center items-center gap-4 bg-white py-8 pl-8 pr-12 rounded-3xl border-b-[3px] border-solid border-[#1DD100]">
@@ -188,7 +188,7 @@
 
 <!-- sit section -->
 
-<section class="bg-[#F7F8F8] py-12 lg:py-32 w-full rounded-t-[88px] border-t-2 border-[#1DD100] px-5 lg:px-0">
+<section id="sit-section" class="bg-[#F7F8F8] py-12 lg:py-32 w-full rounded-t-[88px] border-t-2 border-[#1DD100] px-5 lg:px-0">
     <!-- bus sit div -->
     <div class="container max-w-[1170px] lg:mx-auto font-raleway">
         <h2 class="text-4xl text-[#030712] font-bold text-center mb-6">P.H Paribahan</h2>
@@ -215,7 +215,7 @@
         </div>
         
         
-            <button class="btn font-inter text-[#1DD100] bg-[#1dd10026] rounded-xl text-lg font-medium"><img src="./images/seat-green.png" alt=""> <span>40</span> Seats left</button>
+            <h4 class="flex items-center gap-4 px-4 py-4 font-inter text-[#1DD100] bg-[#1dd10026] rounded-xl text-lg font-medium"><img src="./images/seat-green.png" alt=""> <span id="seat-left">40</span> Seats left</h4>
         
         </div>
         
@@ -381,31 +381,46 @@
         Select Your Seat
     </h3>
 
-    <div class="bg-btn-color px-4 lg:px-8 rounded-xl mt-6">
+    <div class="bg-btn-color px-4 lg:px-4 rounded-xl mt-6">
 
-        <div class="flex justify-between pt-6 border-b-[1px] border-dashed border-[#03071233] pb-4">
+        <div class="flex justify-between pt-6 border-b-[1px] border-dashed border-[#03071233] pb-4 px-3">
         
-            <p class="text-[#030712] text-base font-medium">Seat<span class="text-white bg-[#1DD100] rounded-xl">0</span></p>
+            <p class="text-[#030712] text-base font-medium">Seat <span id="seat-count" class="text-white bg-[#1DD100] rounded-xl px-2">0</span></p>
             <p class="text-[#030712] text-base font-medium">Class</p>
             <p class="text-[#030712] text-base font-medium">Price</p>
         
         </div>
+
+
+            <table id="count-container" class="mt-6 w-full text-center">
+
+            </table>
+
+ 
+
         <hr class=" bg-[#03071233] mt-4 ">
         <div class="flex justify-between py-4 ">
             <p class="text-[#030712] text-base font-medium">Total Price</p>
-            <p class="text-[#030712] text-base font-medium">BDT <span>0</span></p>
+            <p class="text-[#030712] text-base font-medium">BDT <span id="totalPrice">0</span></p>
+        
+        
+        </div>
+
+        <div id="discountContainer" class="flex justify-between pb-4 hidden">
+            <p class="text-[#030712] text-base font-medium">Discount Price</p>
+            <p class="text-[#030712] text-base font-medium">BDT <span id="discountPrice">0</span></p>
         
         
         </div>
         
-        <div class="relative rounded-xl">
-            <input class="input w-full input-bordered join-item text-[#03071266] text-sm" placeholder="Have any cupon?"/>
-            <button class="btn text-white bg-[#1DD100] text-base font-semibold absolute right-1">Apply</button>
+        <div id="cuponContainer" class="relative rounded-xl">
+            <input id="input-field" class="input w-full input-bordered join-item text-[#03071266] text-sm" placeholder="Have any cupon?"/>
+            <button id="apply-btn" class="btn text-white bg-[#1DD100] text-base font-semibold absolute right-1" disabled>Apply</button>
           </div>
         
           <div class="flex justify-between py-4 ">
             <p class="text-[#030712] text-base font-medium">Grand Total</p>
-            <p class="text-[#030712] text-base font-medium">BDT <span>0</span></p>
+            <p class="text-[#030712] text-base font-medium">BDT <span id="grandTotal">0</span></p>
         
         
         </div>
